@@ -1,38 +1,48 @@
 import styled from "styled-components";
 
 export const Container = styled.li`
-	border-bottom: 1px solid #e0e0e0;
-
+	flex-direction: column;
+	border: 1px solid #e0e0e0;
+	margin-right: 1em;
+	border-radius: 8px;
 	&:last-of-type {
+		margin-right: unset;
+	}
+
+	@media screen and (min-width: 726px) {
 		border: none;
+		border-bottom: 1px solid #e0e0e0;
+		margin-right: unset;
+		border-radius: unset;
+		&:last-of-type {
+			border: none;
+		}
 	}
 `;
 export const CardHead = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 0.5em;
+
+	@media screen and (max-width: 726px) {
+		flex-direction: column;
+		background-color: #fff;
+		padding: 1em;
+		border-radius: 8px;
+	}
 	.user {
 		padding: 0.5em;
 		h4 {
-			font-family: Poppins;
-			font-style: normal;
-			font-weight: 600;
 			font-size: 12px;
 			line-height: 24px;
 			/* identical to box height */
-
-			letter-spacing: -0.035em;
 
 			color: #000000;
 		}
 
 		p {
-			font-family: Noto Sans;
-			font-style: normal;
-			font-weight: 500;
 			font-size: 10px;
 			line-height: 16px;
-			letter-spacing: -0.035em;
 
 			/* Gray 3 */
 
@@ -47,22 +57,29 @@ export const CardHead = styled.div`
 	}
 `;
 export const CardDesc = styled.div`
-	font-family: Noto Sans;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 19px;
-	/* identical to box height */
+	display: none;
+	@media screen and (min-width: 726px) {
+		display: block;
+		font-family: Noto Sans;
+		font-style: normal;
+		font-size: 14px;
+		line-height: 19px;
+		/* identical to box height */
 
-	letter-spacing: -0.035em;
+		letter-spacing: -0.035em;
 
-	color: #828282;
+		color: #828282;
+	}
 `;
 export const CardImage = styled.div`
-	padding: 1em 0;
+	display: none;
+	@media screen and (min-width: 726px) {
+		display: block;
+		padding: 1em 0;
 
-	overflow: hidden;
-	img {
-		border-radius: 8px;
+		overflow: hidden;
+		img {
+			border-radius: 8px;
+		}
 	}
 `;

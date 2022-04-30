@@ -6,7 +6,7 @@ const Follow: React.FC = () => {
 		<Container>
 			<h5>who to follow</h5>
 
-			<ul>
+			<ul className="follow-menu">
 				<Person />
 				<Person />
 			</ul>

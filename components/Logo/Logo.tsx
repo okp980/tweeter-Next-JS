@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LogoStyle from "./logo.style";
+import logo from "../../public/assets/images/tweeter-small.svg";
 
 interface ILogo {}
 
@@ -7,12 +8,13 @@ const Logo: React.FC<ILogo> = () => {
 	return (
 		<LogoStyle>
 			<Image
-				src="/assets/images/tweeter-small.svg"
-				alt="logo"
+				src={logo}
+				alt="tweeter-logo"
 				width="40"
-				height="32"
+				height="40"
+				layout="fixed"
 			/>
-			<span>tweeter</span>
+			<div>tweeter</div>
 		</LogoStyle>
 	);
 };

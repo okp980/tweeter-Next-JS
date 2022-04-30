@@ -6,7 +6,7 @@ const Trends: React.FC = () => {
 		<TrendsContainer>
 			<h5>trends for you</h5>
 
-			<ul>
+			<ul className="trend-menu">
 				<Trend />
 				<Trend />
 				<Trend />

@@ -11,21 +11,23 @@ const Layout: React.FC<Iprops> = ({ children }) => {
 		<>
 			<Head>
 				<title>Tweeter</title>
+				<meta
+					charSet="utf-8"
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				/>
 				<meta name="description" content="new Social App" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<HeaderStyle>
-				<div>
+				<div className="container">
 					<Logo />
 					<Nav />
 					<UserProfile />
 				</div>
 			</HeaderStyle>
 
-			<MainContainer>
-				<p className="well">well</p>
-				{children}
-			</MainContainer>
+			<MainContainer>{children}</MainContainer>
 		</>
 	);
 };

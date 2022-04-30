@@ -1,22 +1,22 @@
 import type { NextPage } from "next";
 
 import {
-	Grid,
-	Column,
 	Trends,
 	Follow,
 	Tweets,
 	CreateTweet,
+	Grid,
+	Column,
 } from "../components";
 
 const Home: NextPage = () => {
 	return (
 		<Grid>
-			<Column>
+			<Column size="big">
 				<CreateTweet />
 				<Tweets />
 			</Column>
-			<Column>
+			<Column size="small">
 				<Trends />
 				<Follow />
 			</Column>

@@ -10,8 +10,9 @@ const NavStyled = styled.nav`
 	align-items: center;
 	background-color: #ffffff;
 	padding: 1.5rem 0;
+	z-index: 999;
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 726px) {
 		position: static;
 		padding: 0;
 		height: 100%;
@@ -23,18 +24,16 @@ const NavStyled = styled.nav`
 		padding: 0.3rem 1.5rem;
 		color: ${({ theme: { colors } }) => colors.gray3};
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 726px) {
 			height: 100%;
 			display: flex;
 			align-items: center;
 		}
-		&.active,
-		:active,
-		:hover {
+		&.active {
 			background-color: #f2f2f2;
 			border-radius: 0.5rem;
 
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 726px) {
 				color: ${({ theme: { colors } }) => colors.blue};
 				background-color: unset;
 				border-radius: unset;
@@ -48,9 +47,11 @@ const NavStyled = styled.nav`
 					bottom: 4px;
 					right: 0;
 					height: 3px;
-					/* width: 50%; */
 				}
 			}
+		}
+		&:hover {
+			color: ${({ theme: { colors } }) => colors.blue};
 		}
 
 		.nav-icon {
@@ -62,7 +63,7 @@ const NavStyled = styled.nav`
 			height: 1em;
 			width: 1em;
 
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 726px) {
 				display: none;
 			}
 		}
@@ -70,7 +71,7 @@ const NavStyled = styled.nav`
 		span {
 			display: none;
 			text-transform: capitalize;
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 726px) {
 				display: inline-block;
 			}
 		}

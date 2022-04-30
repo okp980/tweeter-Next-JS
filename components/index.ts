@@ -14,6 +14,8 @@ import Layout from "./Layout/Layout";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav/Nav";
 import UserProfile from "./UserProfile/UserProfile";
+import TweeterLinks from "./TweeterLinks/TweeterLinks";
+import Search from "./Search/Search";
 
 export {
 	Grid,
@@ -32,4 +34,6 @@ export {
 	Logo,
 	Nav,
 	UserProfile,
+	TweeterLinks,
+	Search,
 };

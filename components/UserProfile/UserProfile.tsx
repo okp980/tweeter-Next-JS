@@ -1,15 +1,20 @@
 import Image from "next/image";
+import { FaSortDown } from "react-icons/fa";
+import { StyledDiv } from "./userprofile.style";
 
 const UserProfile = () => {
 	return (
-		<div>
-			<Image
-				src="/assets/images/profile-pic.jpg"
-				width="36"
-				height="36"
-				alt="profile pic"
-			/>
-		</div>
+		<StyledDiv>
+			<div className="user__image">
+				<Image
+					src="/assets/images/profile-pic.jpg"
+					layout="fill"
+					alt="profile-pic"
+				/>
+			</div>
+			<div className="user__name">john smith</div>
+			<FaSortDown />
+		</StyledDiv>
 	);
 };
 

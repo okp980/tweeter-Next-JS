@@ -3,7 +3,7 @@ import { FaUserCircle, FaGlobeAsia } from "react-icons/fa";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 import { ButtonGroup, CreateTweetStyle } from "./createTweet.style";
-const CreateTweet: React.FC<> = () => {
+const CreateTweet: React.FC = () => {
 	return (
 		<CreateTweetStyle>
 			<Card className="createTweet-card">

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TweetHeadStyle = styled.li`
+export const TweetHeadStyle = styled.div`
 	display: flex;
 
 	div {
