@@ -15,6 +15,12 @@
 		"jsx": "preserve",
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/mongodb.js"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"lib/mongodb.js",
+		"components/Button/Button.jsx"
+	],
 	"exclude": ["node_modules"]
 }

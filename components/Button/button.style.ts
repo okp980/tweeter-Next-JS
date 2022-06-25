@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 
 interface ButtonInterface {
-	primary: boolean;
-	secondary: boolean;
-	icon: boolean;
-	socialBtn: boolean;
+	primary?: boolean | undefined;
+	secondary?: boolean | undefined;
+	icon?: boolean | undefined;
+	socialBtn?: boolean | undefined;
+	type?: string | undefined;
 }
 
 export const ButtonStyle = styled.button<ButtonInterface>`
