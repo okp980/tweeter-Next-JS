@@ -8,6 +8,7 @@ interface BtnInterface {
 }
 
 const Button: React.FC<BtnInterface> = ({ children, ...props }) => {
+	// @ts-ignore
 	return <ButtonStyle {...props}>{children}</ButtonStyle>;
 };
 
