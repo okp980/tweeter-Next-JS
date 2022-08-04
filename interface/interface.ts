@@ -16,3 +16,30 @@ export interface DropdownLink {
 	type: string;
 	method?: () => void;
 }
+
+export interface IUser {
+	image: string;
+	name: string;
+	_id: string;
+}
+
+export interface IComment {
+	createdAt: string;
+	desc: string;
+	likes: [string];
+	user: IUser;
+}
+
+export interface ITweet {
+	_id: string;
+	createdBy: {
+		name: string;
+		image: string;
+	};
+	desc: string;
+	likes: [string];
+	comments: [IComment];
+	saves: [string];
+	retweet: [string];
+	createdAt: string;
+}

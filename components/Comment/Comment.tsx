@@ -2,27 +2,35 @@ import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 import { Body, CommentStyle, Head, Message } from "./comment.style";
 import { AiOutlineHeart } from "react-icons/ai";
+import { IComment } from "../../interface/interface";
+import { log } from "console";
+import { useEffect } from "react";
 
-const Comment: React.FC = () => {
+interface IProps {
+	comment: IComment;
+}
+
+const Comment: React.FC<IProps> = ({ comment }) => {
+	useEffect(() => {
+		console.log(comment.user.image);
+	}, [comment]);
+
 	return (
-		<CommentStyle>
-			<Avatar />
+		<CommentStyle data-testid="single-comment">
+			<Avatar image={comment.user.image} />
 			<Message>
 				<Head>
-					<h4>Waqar Bloom </h4>
-					<span>24 August at 20:43</span>
+					<h4>{comment.user.name}</h4>
+					<span>{comment.createdAt}</span>
 				</Head>
 				<Body>
-					<p>
-						I have seen awe-inspiring things that I thought I did never be able
-						to explain to another person.
-					</p>
+					<p>{comment.desc}</p>
 					<div className="comment-controls">
 						<Button secondary icon>
 							<AiOutlineHeart />
 							like
 						</Button>
-						<span>12k Likes</span>
+						<span>{`${comment.likes.length} Likes`}</span>
 					</div>
 				</Body>
 			</Message>

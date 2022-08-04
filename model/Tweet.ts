@@ -1,6 +1,11 @@
 import { Schema, model, models, SchemaTypes } from "mongoose";
 
 const TweetSchema = new Schema({
+	createdBy: {
+		type: Schema.Types.ObjectId,
+		ref: "User",
+		required: true,
+	},
 	desc: {
 		type: String,
 		required: [true, "please enter a tweet"],
@@ -20,6 +25,12 @@ const TweetSchema = new Schema({
 	],
 	saves: [{ type: SchemaTypes.ObjectId, ref: "User" }],
 	retweet: [{ type: SchemaTypes.ObjectId, ref: "User" }],
+});
+
+TweetSchema.pre("save", function (next) {
+	// do stuff
+
+	next();
 });
 
 export default models.Tweet || model("Tweet", TweetSchema);

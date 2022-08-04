@@ -69,7 +69,6 @@ const UserProfile = () => {
 			);
 			setLinks(loggeInLink);
 		}
-		console.log(links);
 	}, [user, dropdownLink]);
 
 	return (

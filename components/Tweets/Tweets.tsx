@@ -1,13 +1,20 @@
+import { ITweet } from "../../interface/interface";
 import Tweet from "../Tweet/Tweet";
 import { TweetsSection } from "./tweets.style";
 
-const Tweets: React.FC = () => {
+interface IProp {
+	tweets: [ITweet];
+}
+
+const Tweets: React.FC<IProp> = ({ tweets }) => {
+	console.log(tweets);
+
 	return (
 		<TweetsSection>
 			<ul>
-				<Tweet />
-				<Tweet />
-				<Tweet />
+				{tweets.map((tweet, index) => (
+					<Tweet key={index} tweet={tweet} />
+				))}
 			</ul>
 		</TweetsSection>
 	);

@@ -1,11 +1,17 @@
+import { IComment } from "../../interface/interface";
 import Comments from "../Comments/Comments";
 import CreateComment from "../CreateComment/CreateComment";
 
-const CommentSection = () => {
+interface IProps {
+	show: Boolean;
+	comments: [IComment];
+}
+
+const CommentSection: React.FC<IProps> = ({ show, comments }) => {
 	return (
 		<div>
 			<CreateComment />
-			<Comments />
+			{show && <Comments comments={comments} />}
 		</div>
 	);
 };

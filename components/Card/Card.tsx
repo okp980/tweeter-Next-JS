@@ -1,7 +1,7 @@
 import { CardStyle } from "./card.style";
 
 interface CardInterface {
-	className: string;
+	className?: string;
 }
 
 const Card: React.FC<CardInterface> = ({ children, ...props }) => {

@@ -1,13 +1,19 @@
 import Avatar from "../Avatar/Avatar";
 import { TweetHeadStyle } from "./tweetHead.style";
 
-const TweetHead: React.FC = () => {
+interface IProps {
+	title: string;
+	date: string;
+	image: string;
+}
+
+const TweetHead: React.FC<IProps> = ({ title, date, image }) => {
 	return (
 		<TweetHeadStyle>
-			<Avatar />
+			<Avatar image={image} />
 			<div>
-				<h4>paytons lyons</h4>
-				<h6>24 August at 20:43</h6>
+				<h4>{title}</h4>
+				<h6>{date}</h6>
 			</div>
 		</TweetHeadStyle>
 	);

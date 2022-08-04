@@ -20,7 +20,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		"lib/mongodb.js",
-		"components/Button/Button.jsx"
+		"components/Button/Button.jsx",
+		"components/TweetHead/__test__/tweetHead.test.js"
 	],
 	"exclude": ["node_modules"]
 }

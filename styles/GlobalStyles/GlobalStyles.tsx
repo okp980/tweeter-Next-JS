@@ -65,6 +65,9 @@ const GlobalStyles = createGlobalStyle`
 
 /*  ===== fonts ===== */
 
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: #F2F2F2;
