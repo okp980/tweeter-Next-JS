@@ -13,6 +13,7 @@ const Avatar: React.FC<IProps> = ({ image }) => {
 			className={classes.userIcon}
 			width={40}
 			height={40}
+			objectFit="contain"
 		/>
 	) : (
 		<FaUserCircle className={classes.userIcon} />

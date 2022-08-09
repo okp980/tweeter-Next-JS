@@ -44,6 +44,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	let tweets;
 	try {
 		tweets = await Tweet.find()
+			.sort({ createdAt: "descending" })
 			.populate("createdBy", "", User)
 			.populate({
 				path: "comments",

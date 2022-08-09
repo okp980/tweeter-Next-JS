@@ -11,10 +11,6 @@ interface IProps {
 }
 
 const Comment: React.FC<IProps> = ({ comment }) => {
-	useEffect(() => {
-		console.log(comment.user.image);
-	}, [comment]);
-
 	return (
 		<CommentStyle data-testid="single-comment">
 			<Avatar image={comment.user.image} />

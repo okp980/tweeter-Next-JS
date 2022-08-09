@@ -7,8 +7,6 @@ interface IProp {
 }
 
 const Tweets: React.FC<IProp> = ({ tweets }) => {
-	console.log(tweets);
-
 	return (
 		<TweetsSection>
 			<ul>
