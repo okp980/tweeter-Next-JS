@@ -41,7 +41,7 @@ const UserProfile = () => {
 				},
 			},
 		],
-		[]
+		[asPath, push]
 	);
 
 	const [showDropdown, setShowDropdown] = useState(false);

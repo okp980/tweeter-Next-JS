@@ -4,7 +4,7 @@ import { CreateCommentStyle } from "./CreaComment.style";
 const CreateComment = () => {
 	return (
 		<CreateCommentStyle>
-			<Avatar />
+			<Avatar image="" />
 			<form>
 				<textarea
 					name="tweet"
