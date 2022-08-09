@@ -7,7 +7,7 @@ const Person = () => {
 	return (
 		<Container>
 			<CardHead>
-				<Avatar />
+				<Avatar image="" />
 				<div className="user">
 					<h4>Mikael Stanley</h4>
 					<p>230k followers</p>
